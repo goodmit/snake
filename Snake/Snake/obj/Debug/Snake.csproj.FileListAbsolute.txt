@@ -1,0 +1,6 @@
+F:\Документы\programming\git\geekbrains\snake\Snake\Snake\bin\Debug\Snake.exe.config
+F:\Документы\programming\git\geekbrains\snake\Snake\Snake\obj\Debug\Snake.csprojResolveAssemblyReference.cache
+F:\Документы\programming\git\geekbrains\snake\Snake\Snake\bin\Debug\Snake.exe
+F:\Документы\programming\git\geekbrains\snake\Snake\Snake\bin\Debug\Snake.pdb
+F:\Документы\programming\git\geekbrains\snake\Snake\Snake\obj\Debug\Snake.exe
+F:\Документы\programming\git\geekbrains\snake\Snake\Snake\obj\Debug\Snake.pdb
