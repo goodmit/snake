@@ -6,7 +6,7 @@ namespace Snake
 {
     class Snake : Figure
     {
-        Direction direction;
+        private Direction direction;
 
         public Snake(Point tail, int lenght, Direction direction)
         {
@@ -30,18 +30,7 @@ namespace Snake
 
             tail.Clear();
             head.Draw();
-        }
-
-        internal bool IsHitTail()
-        {
-            var head = pList.Last();
-            for(int i = 0; i < pList.Count - 2; i++)
-            {
-                if (head.IsHit(pList[i]))
-                    return true;
-            }
-            return false;
-        }
+        }        
 
         public Point GetNextPoint()
         {
@@ -49,6 +38,17 @@ namespace Snake
             Point nextPoint = new Point(head);
             nextPoint.Move(1, direction);
             return nextPoint;
+        }
+
+        public bool IsHitTail()
+        {
+            var head = pList.Last();
+            for (int i = 0; i < pList.Count - 2; i++)
+            {
+                if (head.IsHit(pList[i]))
+                    return true;
+            }
+            return false;
         }
 
         public void HandleKey(ConsoleKey key)

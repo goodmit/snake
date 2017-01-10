@@ -1,14 +1,10 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.Collections.Generic;
 
 namespace Snake
 {
     class Walls
     {
-        List<Figure> wallList;
+        private List<Figure> wallList;
 
         public Walls(int mapWidth, int mapHeight)
         {
@@ -30,20 +26,16 @@ namespace Snake
         {
             foreach(var wall in wallList)
             {
-                if(wall.IsHit(figure)) 
-                {
-                    return true;
-                }
+                if(wall.IsHit(figure))                 
+                    return true;                
             }
             return false;
         }
 
         public void Draw()
         {
-            foreach(var wall in wallList)
-            {
-                wall.Draw();
-            }
+            foreach(var wall in wallList)            
+                wall.Draw();            
         }
     }
 }

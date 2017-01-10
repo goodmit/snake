@@ -1,5 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 
 namespace Snake
 {
@@ -15,7 +14,7 @@ namespace Snake
             }
         }
 
-        internal bool IsHit(Figure figure)
+        public bool IsHit(Figure figure)
         {
             foreach(var p in pList)
             {

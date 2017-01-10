@@ -6,11 +6,7 @@ namespace Snake
     {
         public int x;
         public int y;
-        public char sym;
-
-        public Point()
-        {
-        }
+        public char sym;       
 
         public Point(int x, int y, char sym)
         {
@@ -24,18 +20,7 @@ namespace Snake
             x = p.x;
             y = p.y;
             sym = p.sym;
-        }
-
-        public bool IsHit(Point p)
-        {
-            return p.x == this.x && p.y == this.y;
-        }
-
-        public void Draw()
-        {
-            Console.SetCursorPosition(x, y);
-            Console.Write(sym);
-        }
+        }       
 
         public void Move(int offset, Direction direction)
         {
@@ -54,6 +39,17 @@ namespace Snake
                     y += offset;
                     break;
             }            
+        }
+
+        public bool IsHit(Point p)
+        {
+            return p.x == this.x && p.y == this.y;
+        }
+
+        public void Draw()
+        {
+            Console.SetCursorPosition(x, y);
+            Console.Write(sym);
         }
 
         public void Clear()
