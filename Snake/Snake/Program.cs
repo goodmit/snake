@@ -12,10 +12,14 @@ namespace Snake
         {
             Point p1 = new Point(1, 3, '*');
             p1.Draw();
-
             Point p2 = new Point(4, 5, '#');
             p2.Draw();
-            
+
+            HorizontalLine hLine = new HorizontalLine(1, 15, 8, '+');
+            hLine.Draw();
+            VerticalLine vLine = new VerticalLine(1, 5, 15, '+');
+            vLine.Draw();
+
             Console.ReadLine();
         }
     }
