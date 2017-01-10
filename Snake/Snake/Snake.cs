@@ -12,15 +12,16 @@ namespace Snake
         {
             this.direction = direction;
             pList = new List<Point>();
-            for(int i = 0; i < lenght; i++)
+
+            for (int i = 0; i < lenght; i++)
             {
                 Point p = new Point(tail);
-                p.Move(i, direction);
+                p.Move(i, this.direction);
                 pList.Add(p);
             }
         }
 
-        internal void Move()
+        public void Move()
         {
             Point tail = pList.First();
             pList.Remove(tail);
@@ -39,7 +40,7 @@ namespace Snake
             return nextPoint;
         }
 
-        public void handleKey(ConsoleKey key)
+        public void HandleKey(ConsoleKey key)
         {
             switch (key)
             {
@@ -55,7 +56,20 @@ namespace Snake
                 case ConsoleKey.DownArrow:
                     direction = Direction.DOWN;
                     break;
+            }            
+        }
+
+        public bool Eat(Point food)
+        {
+            Point head = GetNextPoint();
+            if(head.IsHit(food))
+            {
+                food.sym = head.sym;
+                pList.Add(food);
+                return true;
             }
+            else
+                return false;
         }
     }
 }
